@@ -11,10 +11,22 @@ class loginscr extends StatefulWidget {
 }
 
 class _loginscrState extends State<loginscr> {
+  final textcontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          TextFormField(
+            controller: textcontroller,
+            decoration: const InputDecoration(
+              hintText: "enter your Gmail",
+            ),
+          ),
+          
+        ],
+      ),
     );
   }
 }

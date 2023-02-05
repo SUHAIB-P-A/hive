@@ -14,9 +14,7 @@ class home extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Container(
-              child: loginscr(),
-            ),
+            loginscr(),
             const Expanded(child: liststd()),
           ],
         ),

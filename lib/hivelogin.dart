@@ -33,6 +33,11 @@ class _loginscrState extends State<loginscr> {
               hintText: "enter your password",
             ),
           ),
+          ElevatedButton.icon(
+            onPressed: () {},
+            icon: const Icon(Icons.check),
+            label: const Text("login"),
+          ),
         ],
       ),
     );

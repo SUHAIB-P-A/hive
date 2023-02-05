@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:hive_implimentation/functions/db_functions.dart';
+import 'package:hive_implimentation/model/data_model.dart';
 
 final _textcontroller = TextEditingController();
 final _textcontroller1 = TextEditingController();
@@ -77,5 +79,8 @@ Future<void> checkthevalue() async {
   if (_name.isEmpty || _age.isEmpty) {
     return;
   }
-  print("$_name $_age");
+  //print("$_name $_age");
+
+  final _student = Student(name: _name, age: _age);
+  addstudentlist(_student);
 }

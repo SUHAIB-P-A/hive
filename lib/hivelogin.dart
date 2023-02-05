@@ -12,6 +12,7 @@ class loginscr extends StatefulWidget {
 
 class _loginscrState extends State<loginscr> {
   final textcontroller = TextEditingController();
+  final textcontroller1 = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,9 +23,16 @@ class _loginscrState extends State<loginscr> {
             controller: textcontroller,
             decoration: const InputDecoration(
               hintText: "enter your Gmail",
+              border: OutlineInputBorder(),
             ),
           ),
-          
+          TextFormField(
+            controller: textcontroller1,
+            decoration: const InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: "enter your password",
+            ),
+          ),
         ],
       ),
     );

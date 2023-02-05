@@ -4,6 +4,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:hive_implimentation/hivelogin.dart';
+import 'package:hive_implimentation/homescreen.dart';
 
 main() {
   runApp(hiveapp());
@@ -18,7 +19,7 @@ class hiveapp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color.fromARGB(255, 7, 255, 205)
       ),
-      home: const loginscr(),
+      home: const home(),
     );
   }
 }

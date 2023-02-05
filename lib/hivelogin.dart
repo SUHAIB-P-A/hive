@@ -12,44 +12,42 @@ class loginscr extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
-                controller: textcontroller,
-                decoration: const InputDecoration(
-                  hintText: "enter your name",
-                  border: OutlineInputBorder(),
-                ),
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              controller: textcontroller,
+              decoration: const InputDecoration(
+                hintText: "enter your name",
+                border: OutlineInputBorder(),
               ),
             ),
-            const SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextFormField(
-                controller: textcontroller1,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: "enter your age",
-                ),
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              controller: textcontroller1,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: "enter your age",
               ),
             ),
-            const SizedBox(
-              height: 5,
-            ),
-            ElevatedButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.check),
-              label: const Text("login"),
-            ),
-          ],
-        ),
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          ElevatedButton.icon(
+            onPressed: () {},
+            icon: const Icon(Icons.add),
+            label: const Text("ADD"),
+          ),
+        ],
       ),
     );
   }

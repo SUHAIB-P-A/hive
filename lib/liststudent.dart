@@ -21,6 +21,16 @@ class liststd extends StatelessWidget {
             return ListTile(
               title: Text(data.name),
               subtitle: Text(data.age),
+              trailing: IconButton(
+                onPressed: () {
+                  if (data.id != null) {
+                    deletestudentlist(data.id!);
+                  } else {
+                    print("student id is null :unable to delete");
+                  }
+                },
+                icon: Icon(Icons.delete),
+              ),
             );
           }),
           separatorBuilder: ((context, index) {

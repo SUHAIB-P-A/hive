@@ -5,8 +5,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:hive_implimentation/functions/db_functions.dart';
 import 'package:hive_implimentation/model/data_model.dart';
 
-final _textcontroller = TextEditingController();
-final _textcontroller1 = TextEditingController();
+final textcontroller = TextEditingController();
+final textcontroller1 = TextEditingController();
 
 class loginscr extends StatelessWidget {
   loginscr({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class loginscr extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
-              controller: _textcontroller,
+              controller: textcontroller,
               decoration: const InputDecoration(
                 hintText: "enter your name",
                 border: OutlineInputBorder(
@@ -37,7 +37,7 @@ class loginscr extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
-              controller: _textcontroller1,
+              controller: textcontroller1,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.all(
@@ -74,8 +74,8 @@ class loginscr extends StatelessWidget {
 }
 
 Future<void> checkthevalue() async {
-  final _name = _textcontroller.text.trim();
-  final _age = _textcontroller1.text.trim();
+  final _name = textcontroller.text.trim();
+  final _age = textcontroller1.text.trim();
   if (_name.isEmpty || _age.isEmpty) {
     return;
   }
